@@ -25,13 +25,22 @@ ACTION_SPACE = 25
 sess = tf.Session()
 with tf.variable_scope('natural'):
     natural_DQN = DuelingDQN(
-        n_actions=ACTION_SPACE, n_features=3, memory_size=MEMORY_SIZE,
-        e_greedy_increment=0.001, sess=sess, dueling=False)
+        n_actions=ACTION_SPACE, 
+        n_features=3, 
+        memory_size=MEMORY_SIZE,
+        e_greedy_increment=0.001, 
+        sess=sess, 
+        dueling=False)
 
 with tf.variable_scope('dueling'):
     dueling_DQN = DuelingDQN(
-        n_actions=ACTION_SPACE, n_features=3, memory_size=MEMORY_SIZE,
-        e_greedy_increment=0.001, sess=sess, dueling=True, output_graph=True)
+        n_actions=ACTION_SPACE, 
+        n_features=3, 
+        memory_size=MEMORY_SIZE,
+        e_greedy_increment=0.001, 
+        sess=sess, 
+        dueling=True, 
+        output_graph=True)
 
 sess.run(tf.global_variables_initializer())
 
