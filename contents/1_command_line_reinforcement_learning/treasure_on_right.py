@@ -6,6 +6,7 @@ Run this program and to see how the agent will improve its strategy of finding t
 View more on my tutorial page: https://morvanzhou.github.io/tutorials/
 """
 
+from __future__ import print_function
 import numpy as np
 import pandas as pd
 import time
